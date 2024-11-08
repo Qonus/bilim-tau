@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
       <div className={styles.navbar}>
         <div className={styles.navbar_wrapper}>
-          <Link href="/" className={styles.navbar__header}>
+          <Link href="/" className={styles.navbar__header} style={{ textDecoration: 'none' }}>
             <Image
               className={styles.navbar__header__logo}
               src="/favicon.ico"
@@ -21,8 +21,8 @@ export default function Navbar() {
             <li>
             </li>
             <li>
-              <Link href="/">
-                <p>Главная</p>
+              <Link href="/" style={{ textDecoration: 'none' }}>
+                <h4>Главная</h4>
               </Link>
             </li>
           </div>

@@ -4,7 +4,7 @@ export default async function Homepage() {
     return(
         <div className={styles.homepage}>
             <div className={styles.homepage_wrapper}>
-                <a> aakjshdka </a> 
+                <p> Here will be some papers </p> 
             </div>
         </div>
     )
