@@ -2,8 +2,12 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     background-color: rgb(25, 27, 31);
+}
+
+main {
     width: $wrapper-width;
     margin: 0 auto;
+
 }
 
 a{
