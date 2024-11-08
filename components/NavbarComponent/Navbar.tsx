@@ -14,12 +14,13 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__wrapper}>
-        <Link href="/" className={styles.logo}>
-          MyWebsite
+        <Link href="/" className={styles.navbar__logo}>
+          <Image src="/bilim-tau-icon.svg" alt="logo" width={50} height={50} />
+          <p>BilimTau</p>
         </Link>
 
         {/* Desktop Menu */}
-        <div className={styles.navLinks}>
+        <div className={styles.navbar__links}>
           <Link href="/" style={{ textDecoration: "none", color: "white" }}>
             Главная
           </Link>
