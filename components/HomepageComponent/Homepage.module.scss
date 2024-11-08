@@ -5,9 +5,6 @@
     &_wrapper {
         width: $wrapper-width;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 100px;
     }
     
@@ -19,10 +16,11 @@
 
     &__hero_section{
         margin: 150px 0;
-        display: flex;
-        justify-content: space-between;
-        width: max(70%, 300px);
+        width: max(100%, 300px);
         gap: 30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
 
         &__text{
             &__header{
@@ -112,6 +110,23 @@
 
             &__image{
                 display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .homepage {
+        &__hero_section{
+            flex-direction: column;
+
+            &__text{
+                &__header{
+    
+                    &__mobile_image{
+                        display: block;
+                    }
+                }
             }
         }
     }
