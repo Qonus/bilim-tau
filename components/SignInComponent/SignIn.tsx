@@ -9,13 +9,13 @@ export default function SignIn() {
 
   return (
     <>
-      <button
-        onClick={() => {
-          signIn("google");
+      <form
+        action={async () => {
+          await signIn("google");
         }}
       >
-        Войти
-      </button>
+        <button type="submit">Signin with Google</button>
+      </form>
     </>
   );
 }
