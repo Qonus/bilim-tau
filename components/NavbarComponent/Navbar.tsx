@@ -25,6 +25,11 @@ export default function Navbar() {
                 <h4>Главная</h4>
               </Link>
             </li>
+            <li>
+              <Link href="/articles" style={{ textDecoration: 'none' }}>
+                <h4>Материалы</h4>
+              </Link>
+            </li>
           </div>
         </div>
       </div>
