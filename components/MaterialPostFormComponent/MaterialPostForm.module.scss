@@ -1,0 +1,26 @@
+.postform {
+    display: flex;
+    margin: 40px;
+    flex-direction: column;
+    gap: 20px;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        width: 100%;
+        resize: none;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.20);
+        outline: none;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
