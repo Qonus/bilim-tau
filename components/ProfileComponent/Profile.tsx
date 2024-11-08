@@ -25,7 +25,9 @@ export default function Profile() {
               <h3>Email: {session?.user?.email}</h3>
             </div>
           </div>
-          <button onClick={() => signOut()}>Выйти</button>
+          <button className="primary-button" onClick={() => signOut()}>
+            Выйти
+          </button>
         </div>
       ) : (
         <SignIn />

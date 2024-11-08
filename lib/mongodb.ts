@@ -14,6 +14,7 @@ const options = {
 };
 
 let client: MongoClient;
+let clientPromise: Promise<MongoClient>;
 
 if (process.env.NODE_ENV === "development") {
   let globalWithMongo = global as typeof globalThis & {
@@ -26,7 +27,8 @@ if (process.env.NODE_ENV === "development") {
   client = globalWithMongo._mongoClient;
 } else {
   client = new MongoClient(uri, options);
+  clientPromise = client.connect();
 }
 
-export default client;
+export { client, clientPromise};
 

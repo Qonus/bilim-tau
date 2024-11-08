@@ -16,7 +16,7 @@ export default function SignIn() {
             await signIn("google");
           }}
         >
-          <button className={styles.signin} type="submit">
+          <button className={styles.signin + " primary-button"} type="submit">
             Войти с аккаунтом Google
           </button>
         </form>

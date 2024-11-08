@@ -12,7 +12,7 @@ export default function MaterialsPage() {
       <div className={styles.materialspage}>
         {session ? (
           <div>
-            <Link className={styles.addpost} href="/post">
+            <Link className={styles.addpost} href="/postmaterial">
               <Image
                 src="/add-circle.svg"
                 alt="add"
