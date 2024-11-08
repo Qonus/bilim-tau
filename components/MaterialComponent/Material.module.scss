@@ -1,0 +1,23 @@
+.material {
+    &__wrapper {
+        width: $wrapper-width;
+        margin: 0 auto;
+    }
+
+    &__title{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    &__image{
+        display: flex;
+        justify-content: center;
+        border-radius: 20;
+    }
+
+    &_dates{
+
+    }
+}

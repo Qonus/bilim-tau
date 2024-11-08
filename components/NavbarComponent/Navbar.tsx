@@ -26,7 +26,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/articles" style={{ textDecoration: 'none' }}>
+              <Link href="/materials" style={{ textDecoration: 'none' }}>
                 <h4>Материалы</h4>
               </Link>
             </li>
