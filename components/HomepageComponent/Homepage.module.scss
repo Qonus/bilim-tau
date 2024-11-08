@@ -15,7 +15,7 @@
     }
 
     &__hero_section{
-        margin: 150px 0;
+        margin: 30px 0;
         width: max(100%, 300px);
         gap: 30px;
         display:flex;
@@ -44,6 +44,7 @@
     }
 
     &__about_us_section{
+        margin: 10% 0;
         padding: 40px;
         width: 100%;
         display: flex;
@@ -66,6 +67,7 @@
 
             &__header{
                 font-size: 25px;
+                font-weight: bold;
             }
         }
     }
@@ -74,8 +76,10 @@
         width: 100%;
         text-align: center;
         display: flex;
-        flex-direction: column;
         gap: 5px;
+        height: 50%;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     hr {

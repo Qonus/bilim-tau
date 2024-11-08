@@ -7,34 +7,37 @@ export default function MaterialCard({
   title = "",
   likes = 0,
   image = "/default_image.jpg",
+  tags = ["Тэг Плейсхолдер", "Убрать тэги позже"]
 }: {
   href: string;
   title?: string;
   likes?: number;
   image?: string;
+  tags?: string[];
 }) {
   return (
-    <Link href={href} className={styles.article_card + " glass"} style={{textDecoration:'none'}}>
+    <Link href={href} className={styles.material_card + " glass"} style={{textDecoration:'none'}}>
       <Image
-        className={styles.article_card__image}
+        className={styles.material_card__image}
         src={image}
         width={600}
         height={200}
         alt="article image"
       />
-      <div className={styles.article_card__stats}>
-        <Image
-          className={"primary_color_svg " + styles.article_card__stats__heart}
-          src="/heart.svg"
-          width={30}
-          height={30}
-          alt="like icon"
-        />
-        <p>{likes}</p>
+      <div className={styles.material_card__text}>
+        <div className={styles.material_card__text__title}> <p> Заголовок </p> </div>
+        <div className={styles.material_card__text__description}><p>Описание</p></div>
+        <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+
+        {tags.map((tag, index) => (
+            <span key={index} style={{ padding: '5px 10px', backgroundColor: '#f1f1f1', borderRadius: '4px', fontSize: '14px' }}>
+              <p> {tag} </p>
+            </span>
+          ))}
       </div>
-      <div className={styles.article_card__title}>
-        <p>{title}</p>
       </div>
+
+      
     </Link>
   );
 }

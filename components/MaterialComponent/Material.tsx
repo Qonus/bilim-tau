@@ -17,15 +17,15 @@ const Material: React.FC<ArticleProps> = ({ title, image, publish_date, last_cha
         <div className={styles.material__title}><p>{title}</p></div>
           <Image 
           className={styles.material__image}
-          src="/Users/gulmiraamangeldiyeva/Desktop/bilim-tau/src/app/favicon.ico" //i could nate place "{image}" in there(
+          src="/globe.svg" //i could nate place "{image}" in there(
           alt="Титуальное изображение" 
           width={500}
           height={500}/>
           <div>
-            <p><strong>Published:</strong> {publish_date.toLocaleDateString()}</p>
-            {last_changed && <p><strong>Last Updated:</strong> {last_changed.toLocaleDateString()}</p>}
+            <p><strong><p>Published:</p></strong> {publish_date.toLocaleDateString()}</p>
+            {last_changed && <p><strong><p> Last Updated: </p></strong> {last_changed.toLocaleDateString()}</p>}
           </div>
-        <div>{content}</div>
+        <div><p> {content} </p></div>
       </div>
       
     </div>

@@ -1,70 +1,63 @@
 /* Основной стиль для навбара */
 .navbar {
-    background-color: $bg2;
+    background-color: rgba(17, 28, 124);
     border-radius: 10px;
     box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.15);
     color: #fff;
     padding: 1rem;
+    width: 100%;
+}
 
-    &__wrapper{
-        width: $wrapper-width;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-        & > * {
-            margin: auto 0;
-            & > * {
-                margin: auto 0;
-            }
-        }
-    }
-
-    &__logo {
-      font-size: 2rem;
-      color: $foreground-color-1;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      height: 100%;
-      gap: 10px;
-    }
-
-    &__links {
-      display: flex;
-      gap: 1.5rem;
-    }
+  &__head{
+    display: flex;
+    gap:10px;
+    align-items: center;
   }
-  
-  /* Кнопка меню для мобильных устройств */
+}
+
+/* Логотип */
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ссылки на навбаре (desktop) */
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Кнопка меню для мобильных устройств */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown меню для мобильных */
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Медиа-запросы для мобильных */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Скрываем ссылки на desktop */
+  }
+
   .menuButton {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: block; /* Показываем кнопку на мобильных */
   }
-  
-  /* Dropdown меню для мобильных */
-  .dropdownMenu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  /* Медиа-запросы для мобильных */
-  @media (max-width: 768px) {
-    .navLinks {
-      display: none; /* Скрываем ссылки на desktop */
-    }
-    .dropdownMenu {
-      display: flex;
-
-    }
-    .menuButton {
-      display: block; /* Показываем кнопку на мобильных */
-    }
-  }
-  
+}
