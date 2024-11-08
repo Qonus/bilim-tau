@@ -12,26 +12,33 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbar__wrapper}>
-        <div className={styles.navbar__head}>
-        <Image
-          className={styles.navbar__header__logo}
-          src="/Users/gulmiraamangeldiyeva/Desktop/bilim-tau/public/favicon.ico"
-          width={50}
-          height={50}
-          alt="logo"
-        />
-        <Link href="/" className={styles.logo}>
-          Placeholder
-        </Link>
-        </div>
-        
-        
-        {/* Desktop Menu */}
-        <div className={styles.navLinks}>
-          <Link href="/" style={{textDecoration:'none', color:'white'}}>Главная</Link>
-          <Link href="/materials" style={{textDecoration:'none',color:'white'}}><p>Материалы</p></Link>
+    <>
+      <div className={styles.navbar}>
+        <div className={styles.navbar_wrapper}>
+          <Link href="/" className={styles.navbar__header} style={{ textDecoration: 'none' }}>
+            <Image
+              className={styles.navbar__header__logo}
+              src="/favicon.ico"
+              width={50}
+              height={50}
+              alt="pen logo"
+            />
+            <h3>Placeholder</h3>
+          </Link>
+          <div className={styles.navbar__nav}>
+            <li>
+            </li>
+            <li>
+              <Link href="/" style={{ textDecoration: 'none' }}>
+                <h4>Главная</h4>
+              </Link>
+            </li>
+            <li>
+              <Link href="/materials" style={{ textDecoration: 'none' }}>
+                <h4>Материалы</h4>
+              </Link>
+            </li>
+          </div>
         </div>
         
         {/* Mobile Menu Button */}
