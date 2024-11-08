@@ -1,0 +1,118 @@
+.homepage {
+    width: 100%;
+    display: flex;
+    
+    &_wrapper {
+        width: $wrapper-width;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+    
+    &__description {
+        font-size: 17px;
+        color: $foreground-color-3;
+        margin-left: 20px;
+    }
+
+    &__hero_section{
+        margin: 150px 0;
+        display: flex;
+        justify-content: space-between;
+        width: max(70%, 300px);
+        gap: 30px;
+
+        &__text{
+            &__header{
+                font-size: 40px;
+                font-weight: 600;
+                display: flex;
+                flex-shrink: 3;
+
+                &__mobile_image{
+                    object-fit: cover;
+                    width: 30px;
+                    height: 30px;
+                    display: none;
+                }
+            }
+        }
+
+        &__image{
+            object-fit: cover;
+        }
+    }
+
+    &__about_us_section{
+        padding: 40px;
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 40px;
+
+        &__image{
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            gap:7px;
+            flex-shrink: min(1);
+
+            &__header{
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__top_articles, &__top_users {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    hr {
+        margin-bottom: 40px;
+    }
+
+    &__read_more_shadow {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .homepage {
+        &__about_us_section{
+            flex-direction: column;
+        }
+
+        &__hero_section{
+            flex-direction: column;
+
+            &__text{
+                &__header{
+    
+                    &__mobile_image{
+                        display: block;
+                    }
+                }
+            }
+
+            &__image{
+                display: none;
+            }
+        }
+    }
+}
