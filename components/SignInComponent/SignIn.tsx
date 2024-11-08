@@ -14,7 +14,7 @@ export default function SignIn() {
           signIn("google");
         }}
       >
-        Continue with Google
+        Войти
       </button>
     </>
   );

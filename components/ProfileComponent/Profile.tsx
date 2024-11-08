@@ -10,9 +10,10 @@ export default function Profile() {
 
   return (
     <>
+      <p>{JSON.stringify(session)}</p>
       <h1>Hello, {session?.user?.name}</h1>
       <Image
-        src={session?.user?.image!}
+        src={session?.user?.image as string}
         alt="profile picture"
         width={60}
         height={60}
