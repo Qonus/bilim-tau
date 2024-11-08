@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbarContainer}>
+      <div className={styles.navbar__wrapper}>
         <Link href="/" className={styles.logo}>
           MyWebsite
         </Link>

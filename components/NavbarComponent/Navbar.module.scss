@@ -1,6 +1,6 @@
 /* Основной стиль для навбара */
 .navbar {
-    background-color: #0d1258;
+    background-color: $bg2;
     color: #fff;
     padding: 1rem;
 
@@ -21,12 +21,6 @@
     &__head{
         
     }
-  }
-  
-  .navbarContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   
   /* Логотип */
