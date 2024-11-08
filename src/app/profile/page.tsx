@@ -1,6 +1,4 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+"use client";
 import { signIn, useSession } from "next-auth/react";
 import Profile from "../../../components/ProfileComponent/Profile";
 import SignIn from "../../../components/SignInComponent/SignIn";
