@@ -56,7 +56,7 @@
   
   /* Медиа-запросы для мобильных */
   @media (max-width: 768px) {
-    .navLinks {
+    .navbar__links {
       display: none; /* Скрываем ссылки на desktop */
     }
     .dropdownMenu {
