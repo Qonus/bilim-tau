@@ -12,33 +12,16 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      <div className={styles.navbar}>
-        <div className={styles.navbar_wrapper}>
-          <Link href="/" className={styles.navbar__header} style={{ textDecoration: 'none' }}>
-            <Image
-              className={styles.navbar__header__logo}
-              src="/favicon.ico"
-              width={50}
-              height={50}
-              alt="pen logo"
-            />
-            <h3>Placeholder</h3>
-          </Link>
-          <div className={styles.navbar__nav}>
-            <li>
-            </li>
-            <li>
-              <Link href="/" style={{ textDecoration: 'none' }}>
-                <h4>Главная</h4>
-              </Link>
-            </li>
-            <li>
-              <Link href="/materials" style={{ textDecoration: 'none' }}>
-                <h4>Материалы</h4>
-              </Link>
-            </li>
-          </div>
+    <nav className={styles.navbar}>
+      <div className={styles.navbarContainer}>
+        <Link href="/" className={styles.logo}>
+          MyWebsite
+        </Link>
+        
+        {/* Desktop Menu */}
+        <div className={styles.navLinks}>
+          <Link href="/" style={{textDecoration:'none', color:'white'}}>Главная</Link>
+          <Link href="/materials" style={{textDecoration:'none', color:'white'}}>Материалы</Link>
         </div>
         
         {/* Mobile Menu Button */}
@@ -50,8 +33,8 @@ const Navbar = () => {
       {/* Dropdown Menu for Mobile */}
       {menuOpen && (
         <div className={styles.dropdownMenu}>
-          <Link href="/" style={{textDecoration:'none',color:'white'}} onClick={() => setMenuOpen(false)}><p>Главная</p></Link>
-          <Link href="/materials" style={{textDecoration:'none',color:'white'}} onClick={() => setMenuOpen(false)}><p>Материалы</p></Link>
+          <Link href="/" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Главная</Link>
+          <Link href="/Materials" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Материалы</Link>
         </div>
       )}
     </nav>
