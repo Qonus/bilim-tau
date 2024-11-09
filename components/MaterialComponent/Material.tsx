@@ -29,12 +29,6 @@ const Material: React.FC<ArticleProps> = ({ title, image, publish_date, last_cha
         <div className={styles.material__dates}>
           Published: {publish_date.toDateString()}, Last Change: {last_changed?.toDateString()}
         </div>
-          <Image 
-          className={styles.material__image}
-          src={image ?? "/default-material-image.jpg"}
-          alt="Титульное изображение" 
-          width={500}
-          height={100}/>
         <div className={styles.material__text}><p> {content} </p></div>
         <div className={styles.material__media + " glass"}>
 
