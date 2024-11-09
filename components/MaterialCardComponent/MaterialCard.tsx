@@ -28,7 +28,7 @@ export default function MaterialCard({
       </div>
       
       <div className={styles.material_card__text}>
-        <div className={styles.material_card__text__title}> <p> Заголовок </p> </div>
+        <div className={styles.material_card__text__title}>  Заголовок  </div>
         <div className={styles.material_card__text__description}>
           <p>
             Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание  

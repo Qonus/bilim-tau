@@ -11,7 +11,7 @@ export default async function ArticlePage({ params }: any) {
           publish_date={new Date("2019-01-16")}
           last_changed={new Date("2019-01-16")}
           image={"/favicon.ico"}
-          content="Material content placeholder(lower should be sum media content)"
+          content="Это конспект по тригонометрии за 9-10 классы. Тут в пдф и фото вы можете найти все нужные формулы и теоремы по тригонометрии. Удачи!"
         />
       </div>
     </div>

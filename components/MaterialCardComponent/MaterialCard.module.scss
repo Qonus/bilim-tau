@@ -65,8 +65,10 @@
         align-items: start;
 
         &__title{
+            margin: 10px;
             font-size: x-large;
             font-weight: 600;
+            color: $foreground-color-1;
         }
 
         &__description{
