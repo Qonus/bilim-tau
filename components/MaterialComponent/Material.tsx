@@ -20,10 +20,10 @@ const Material: React.FC<ArticleProps> = ({ title, image, publish_date, last_cha
         </div>
           <Image 
           className={styles.material__image}
-          src="/next.svg" //i could nate place "{image}" in there(
-          alt="Титуальное изображение" 
+          src={image ?? "/default-material-image.jpg"}
+          alt="Титульное изображение" 
           width={500}
-          height={500}/>
+          height={100}/>
         <div className={styles.material__text}><p> {content} </p></div>
         <div className={styles.material__media + " glass"}>
 
