@@ -36,6 +36,7 @@ export async function POST(req: Request) {
       title,
       description,
       tags,
+      likes: 0,
       files: uploadedFiles,  // Adjust for URLs if using cloud storage
       createdAt: new Date(),
     };
@@ -46,5 +47,15 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error("Error creating post:", error);
     return NextResponse.json({ success: false, error: 'Failed to create post' });
+  }
+}
+
+export async function GET() {
+  try {
+    const materials = await client.db().collection("posts").find({}).toArray();  // Replace with your actual collection name
+    return new Response(JSON.stringify(materials), { status: 200 });
+  } catch (error) {
+    console.error("Failed to fetch materials:", error);
+    return new Response("Failed to fetch materials", { status: 500 });
   }
 }
