@@ -4,9 +4,19 @@
   padding: 1rem;
   position: fixed;
   width: 100%;
-  margin: auto 0;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__wrapper{
+    width: $wrapper-width;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .navbarContainer {
@@ -43,6 +53,7 @@
 .dropdownMenu {
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 1rem;
   margin-top: 1rem;
 }

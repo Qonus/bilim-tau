@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbarContainer}>
+      <div className={styles.navbar__wrapper}>
         <Link href="/" className={styles.logo}>
           Bilim Tau
         </Link>
@@ -40,9 +40,11 @@ const Navbar = () => {
         <button className={styles.menuButton} onClick={toggleMenu}>
           ☰
         </button>
-      </div>
+      
 
       {/* Dropdown Menu for Mobile */}
+      
+      </div>
       {menuOpen && (
         <div className={styles.dropdownMenu}>
           <Link href="/" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Главная</Link>
