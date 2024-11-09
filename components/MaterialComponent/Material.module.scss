@@ -1,7 +1,9 @@
 .material {
+    
     &__wrapper {
         width: $wrapper-width;
         margin: 0 auto;
+        padding:5%;
     }
 
     &__title{

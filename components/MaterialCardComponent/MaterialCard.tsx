@@ -29,7 +29,11 @@ export default function MaterialCard({
       
       <div className={styles.material_card__text}>
         <div className={styles.material_card__text__title}> <p> Заголовок </p> </div>
-        <div className={styles.material_card__text__description}><p>Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание  </p></div>
+        <div className={styles.material_card__text__description}>
+          <p>
+            Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание  
+          </p>
+        </div>
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
 
         {tags.map((tag, index) => (

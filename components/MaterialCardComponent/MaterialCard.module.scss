@@ -57,7 +57,7 @@
     &__text{
         width: 100%;
         height: auto;
-        padding: 10px;
+        padding: 5px;
         border-top: 1px solid #999;
         display:flex;
         flex: 1;
@@ -75,6 +75,19 @@
 
         &__tags{
             align-self: flex-end;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .material_card{
+        &__text{
+            &__title{
+                font-size:medium;
+            }
+            &__description{
+                font-size: xx-small;
+            }
         }
     }
 }
