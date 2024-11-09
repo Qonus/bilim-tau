@@ -29,39 +29,32 @@ export default async function Homepage() {
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/Raiden_Background.jpg"
         />
         <MaterialCard
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/vergil_background.jpg"
         />
         <MaterialCard
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/vergil_background.jpg"
         />
         <MaterialCard
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/vergil_background.jpg"
         />
         <MaterialCard
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/vergil_background.jpg"
         />
         <MaterialCard
           href="/materials/1"
           title="placeholder"
           likes={10}
-          image="/vergil_background.jpg"
         />
-
         </div>
         
       </div>
