@@ -1,9 +1,9 @@
 .material_card{
     width: 49%;
-    height: 100%;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: end;
+    flex-direction: column;
+    justify-content: end;
     background-color: transparent;
     transition: background-color;
     transition-duration: 0.5s;
@@ -15,10 +15,14 @@
         }
     }
 
+    &__image_container{
+        width: 100%;
+        height: auto;
+    }
+
     &__image {
         width: 100%;
-        height:fit-content;
-        position: absolute;
+        height: auto;
         top: 0%;
         bottom: 0%;
         z-index: 1;
@@ -56,6 +60,7 @@
         padding: 10px;
         border-top: 1px solid #999;
         display:flex;
+        flex: 1;
         flex-direction: column;
         align-items: start;
 

@@ -17,16 +17,19 @@ export default function MaterialCard({
 }) {
   return (
     <Link href={href} className={styles.material_card + " glass"} style={{textDecoration:'none'}}>
-      <Image
-        className={styles.material_card__image}
-        src={image}
-        width={600}
-        height={200}
-        alt="article image"
-      />
+      <div className={styles.material_card__image_container}>
+        <Image
+          className={styles.material_card__image}
+          src={image}
+          width={600}
+          height={300}
+          alt="article image"
+        />
+      </div>
+      
       <div className={styles.material_card__text}>
         <div className={styles.material_card__text__title}> <p> Заголовок </p> </div>
-        <div className={styles.material_card__text__description}><p>Описание</p></div>
+        <div className={styles.material_card__text__description}><p>Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание  </p></div>
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
 
         {tags.map((tag, index) => (
