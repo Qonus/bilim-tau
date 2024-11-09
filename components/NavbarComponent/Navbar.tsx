@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__wrapper}>
-        <Link href="/" className={styles.navbar__logo}>
+        <div className={styles.navbar__logo}>
           <Image src="/bilim-tau-icon.svg" alt="logo" width={50} height={50} />
-          <p>BilimTau</p>
-        </Link>
+          <Link href="/">BilimTau</Link>
+        </div>
 
         {/* Desktop Menu */}
         <div className={styles.navbar__links}>

@@ -23,11 +23,15 @@
     &__logo {
       font-size: 2rem;
       color: $foreground-color-1;
-      text-decoration: none;
       display: flex;
       align-items: center;
       height: 100%;
       gap: 10px;
+      
+      a {
+        
+        text-decoration: none;
+      }
     }
 
     &__links {
