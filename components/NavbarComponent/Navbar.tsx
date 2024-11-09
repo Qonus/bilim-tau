@@ -25,9 +25,17 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__wrapper}>
+        <div className={styles.navbar__head}>
+        <Image 
+          src="/bilim-tau-icon.png"
+          alt="logo"
+          width={60}
+          height={60}/>
         <Link href="/" className={styles.logo}>
           Bilim Tau
         </Link>
+        </div>
+        
 
         {/* Desktop Menu */}
         <div className={styles.navLinks}>

@@ -37,7 +37,7 @@ export default function MaterialCard({
         <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
 
         {tags.map((tag, index) => (
-            <span key={index} style={{ padding: '5px 10px', backgroundColor: '#f1f1f1', borderRadius: '4px', fontSize: '14px' }}>
+            <span key={index} style={{ padding: '5px 10px', backgroundColor: '#59a6ff', borderRadius: '4px', fontSize: '14px' }}>
               <p> {tag} </p>
             </span>
           ))}
