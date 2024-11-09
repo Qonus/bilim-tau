@@ -25,18 +25,11 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbarContainer}>
-        <div className={styles.navbarContainer__head}>
-        <Image 
-          src="/bilim-tau-icon.png"
-          alt="Logo"
-          width={70}
-          height={70}/>
-        <Link href="/" className={styles.logo}>
-          Bilim Tau
+      <div className={styles.navbar__wrapper}>
+        <Link href="/" className={styles.navbar__logo}>
+          <Image src="/bilim-tau-icon.svg" alt="logo" width={50} height={50} />
+          <p>BilimTau</p>
         </Link>
-        </div>
-        
 
         {/* Desktop Menu */}
         <div className={styles.navLinks}>

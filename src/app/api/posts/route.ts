@@ -1,25 +1,29 @@
 // app/api/posts/route.ts
 import { NextResponse } from 'next/server';
-import client from '../../../../lib/mongodb';
+import {clientPromise} from '../../../../lib/mongodb';
 
 export async function POST(req: Request) {
   try {
     const data = await req.formData();
     const title = data.get('title') as string;
     const description = data.get('description') as string;
+    
+    // Parse `tags` from JSON string to array of strings
     const tags = JSON.parse(data.get('tags') as string) as string[];
+
     const files = data.getAll('files') as File[];
 
     // Connect to MongoDB
+    const client = await clientPromise;
     const db = client.db('test');
     const collection = db.collection('posts');
 
-    // Upload files to the server or external storage
+    // Process files (example only; actual file storage may vary)
     const uploadedFiles = files.map((file) => ({
       filename: file.name,
       contentType: file.type,
       size: file.size,
-      // Add file path or URL after saving it
+      // Placeholder for file storage path or URL
       path: `/uploads/${file.name}`,
     }));
 
