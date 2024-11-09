@@ -5,6 +5,7 @@ import {clientPromise} from '../../../../lib/mongodb';
 export async function POST(req: Request) {
   try {
     const data = await req.formData();
+    const author = data.get('author') as string;
     const title = data.get('title') as string;
     const description = data.get('description') as string;
     
@@ -28,10 +29,11 @@ export async function POST(req: Request) {
     }));
 
     const newPost = {
+      author,
       title,
       description,
       tags,
-      files: uploadedFiles,
+      files: files,
       createdAt: new Date(),
     };
 

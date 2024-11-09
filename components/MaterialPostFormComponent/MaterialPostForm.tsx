@@ -2,6 +2,7 @@
 "use client";
 import styles from "./MaterialPostForm.module.scss";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 const PostForm = () => {
   const [title, setTitle] = useState("");
@@ -23,8 +24,9 @@ const PostForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    const { data: session } = useSession();
     const formData = new FormData();
+    formData.append("author", session?.user?.email as string);
     formData.append("title", title);
     formData.append("description", description);
     formData.append("tags", JSON.stringify(tags));
