@@ -11,7 +11,6 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Close dropdown on resize if window width is greater than 768px
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -25,10 +24,9 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar__wrapper}>
-        <Link href="/" className={styles.navbar__logo}>
-          <Image src="/bilim-tau-icon.svg" alt="logo" width={50} height={50} />
-          <p>BilimTau</p>
+      <div className={styles.navbarContainer}>
+        <Link href="/" className={styles.logo}>
+          Bilim Tau
         </Link>
 
         {/* Desktop Menu */}
@@ -48,12 +46,11 @@ const Navbar = () => {
       {menuOpen && (
         <div className={styles.dropdownMenu}>
           <Link href="/" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Главная</Link>
-          <Link href="/profile" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Профиль</Link>
           <Link href="/materials" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Материалы</Link>
+          <Link href="/profile" style={{textDecoration:'none', color:'white'}} onClick={() => setMenuOpen(false)}>Профиль</Link>
         </div>
       )}
     </nav>
-    
   );
 };
 
