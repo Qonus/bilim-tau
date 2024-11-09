@@ -30,8 +30,8 @@ export default function RootLayout({
     <SessionWrapper>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <Navbar />
           <main>
-            <Navbar />
             {children}
           </main>
         </body>
