@@ -1,5 +1,6 @@
 // components/PostForm.tsx
 "use client";
+import { useSession } from "next-auth/react";
 import styles from "./MaterialPostForm.module.scss";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ const PostForm = () => {
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [files, setFiles] = useState<File[]>([]);
+  const { data: session } = useSession();
 
   // Handle file selection
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,8 +25,8 @@ const PostForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     const formData = new FormData();
+    formData.append("author", session?.user?.email as string);
     formData.append("title", title);
     formData.append("description", description);
     formData.append("tags", JSON.stringify(tags));

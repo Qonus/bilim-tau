@@ -1,37 +1,42 @@
-// app/api/posts/route.ts
 import { NextResponse } from 'next/server';
-import {clientPromise} from '../../../../lib/mongodb';
+import { client } from '../../../../lib/mongodb';
 
 export async function POST(req: Request) {
   try {
     const data = await req.formData();
+    const author = data.get('author') as string;
     const title = data.get('title') as string;
     const description = data.get('description') as string;
-    
-    // Parse `tags` from JSON string to array of strings
     const tags = JSON.parse(data.get('tags') as string) as string[];
 
-    const files = data.getAll('files') as File[];
+    // Debug: log received files
+    const files = data.getAll('files');
+    console.log("Files received:", files);
+
+    const uploadedFiles = files.map((file) => {
+      if (file instanceof File) {
+        return {
+          filename: file.name,
+          size: file.size,
+          blob: file.bytes,
+          type: file.type,
+        };
+      }
+      return null;
+    }).filter(Boolean);
+
+    console.log("Parsed files:", uploadedFiles);
 
     // Connect to MongoDB
-    const client = await clientPromise;
     const db = client.db('test');
     const collection = db.collection('posts');
 
-    // Process files (example only; actual file storage may vary)
-    const uploadedFiles = files.map((file) => ({
-      filename: file.name,
-      contentType: file.type,
-      size: file.size,
-      // Placeholder for file storage path or URL
-      path: `/uploads/${file.name}`,
-    }));
-
     const newPost = {
+      author,
       title,
       description,
       tags,
-      files: uploadedFiles,
+      files: uploadedFiles,  // Adjust for URLs if using cloud storage
       createdAt: new Date(),
     };
 
@@ -39,7 +44,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, data: result });
   } catch (error) {
-    console.error(error);
+    console.error("Error creating post:", error);
     return NextResponse.json({ success: false, error: 'Failed to create post' });
   }
 }
